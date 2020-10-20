@@ -17,10 +17,10 @@ if (process.env.NODE_ENV !== 'production') {
   // variables are loaded.
   //
   // A) Uncomment this lines:
-  // dotenv.config({
-  //   path: path.join(__dirname, '../.env'),
-  //   example: path.join(__dirname, '../.env.example')
-  // })
+  dotenv.config({
+    path: path.join(__dirname, '../.env'),
+    example: path.join(__dirname, '../.env.example')
+  })
 }
 
 const config = {
@@ -35,15 +35,15 @@ const config = {
     // This object is exported.
     //
     // A) Uncomment this line (SECRET TO GENERATE THE JWT TOKEN):
-    // jwtSecret: requireProcessEnv('JWT_SECRET'),
+    jwtSecret: requireProcessEnv('JWT_SECRET'),
     // A) Uncomment this lines (MONGO OPTIONS):
-    // mongo: {
-    //   options: {
-    //     useUnifiedTopology: true,
-    //     useNewUrlParser: true,
-    //     useCreateIndex: true,
-    //   }
-    // }
+    mongo: {
+      options: {
+        useUnifiedTopology: true,
+        useNewUrlParser: true,
+        useCreateIndex: true,
+      }
+    }
   },
   test: { },
   development: {
