@@ -8,16 +8,15 @@ const api = require('./api');
 // >> Here is where the app
 // is initializated and the
 // server start running
-//
-// A) Uncomment this lines:
 const app = express(apiRoot, api);
 const server = http.createServer(app);
 
 
-
 // >> Here will be the connection
 // to mongodb.
-mongoose.connect(mongo.uri)
+if(mongo.uri) {
+  mongoose.connect(mongo.uri).then(() => console.log('Ready'));
+}
 
 
 setImmediate(() => {

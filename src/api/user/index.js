@@ -2,12 +2,14 @@ const router = require('express').Router();
 const UserController = require('./controller');
 const path = '/users';
 
+
 // >> Here will be the
 // definition of the routes.
-router.get('', UserController.find);
-router.post('', UserController.create);
-router.put('', UserController.update);
-router.delete('', UserController.delete);
+router.get('', UserController.findUser);
+router.post('', UserController.createUser);
+router.put('', UserController.updateUser);
+router.delete('', UserController.deleteUser);
+
 
 module.exports = {
   path,
