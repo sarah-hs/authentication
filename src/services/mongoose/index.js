@@ -5,8 +5,7 @@ const { mongo } = require('../../config');
 // options are register on the package
 // and then, with theses options, is
 // initialized.
-//
-// A) Uncomment this lines:
+
 Object.keys(mongo.options || {}).forEach((key) => {
   mongoose.set(key, mongo.options[key])
 });

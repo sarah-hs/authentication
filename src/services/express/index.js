@@ -12,8 +12,6 @@ module.exports = (apiRoot, routes) => {
 
   // >>> Here is where all the routes
   // are register on the app.
-  //
-  // A) Uncomment this line:
   app.use(apiRoot, routes);
   
   return app;
