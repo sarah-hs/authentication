@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const router = new Router()
+const {authenticate} = require('../services/middlewares');
 
 // >> Here will be the APIs
 // importation ('require').

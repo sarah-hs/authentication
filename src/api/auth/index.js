@@ -5,7 +5,7 @@ const path = '/auth';
 
 // >> Here will be the
 // definition of the routes.
-router.get('', AuthController.signin);
+router.get('/login', AuthController.signin);
 router.post('', AuthController.signin);
 router.put('', AuthController.signin);
 router.delete('', AuthController.signin);

@@ -18,17 +18,6 @@ const getExpiration = (token) => {
     return jwt.decode(token).exp;
 }
 
-const verify = (token, user) => {
-    jwt.verify(token, jwtSecret, (err, user) => {
-        if (err) {
-          // Send Forbidden
-        }
-        
-        // Continue the request
-    });
-}
-
-
 module.exports = {
     getToken,
     getExpiration,

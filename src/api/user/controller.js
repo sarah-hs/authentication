@@ -5,8 +5,7 @@ const User = require("./model");
 // endpoints for the Users.
 UserController.findUser = (req, res) => {
     User.model.findOne(
-        {username: req.body.username},
-        {username: true, password: true}
+        {username: req.body.username}
     ).then(
         (user) => res.json(user)
     );
